@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>:::</title>
+	<style>
+::selection {
+	background-color: #ddd;
+	color: #333333;
+}
+body {
+	font-weight: normal;
+	font-family: system-ui, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	overflow-x: hidden;
+	font-size:0.75rem;
+	counter-reset:question;
+}
+ul{
+	list-style-type: none;
+	margin:0;padding:0;
+}
+a{
+	text-decoration: none;
+}
+a,a:visited,a:active{
+	color:#000;
+}
+h2 {
+	font-size: 1em;
+	font-weight:normal;
+	position: relative;
+	z-index: 0;
+	margin:0;
+	display:flex;
+	align-items: center;
+	justify-content: space-between;
+}
+h2:before {
+	counter-increment: question;
+	content: counter(question) " )";
+}
+main > ul:first-of-type{
+	margin-bottom:2rem;
+}
+div > pre:first-of-type{
+	font-family: 'Cascadia Code', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1em;
+	tab-size: 4;
+}
+div.outputC {
+	list-style-type: none;
+	font-family: monospace;
+	background: #fff;
+	color: #000;
+	padding: 12px;
+	margin-top: 3rem;
+	border: 1px solid #ccc;
+	position: relative;
+}
+div.outputC:before {
+	content: 'OUTPUT';
+	padding: 0 12pt;
+	position: absolute;
+	background: #fff;
+	color: #7b7b91;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: calc(100% - 5pt);
+}
+</style>
+<style>
+	#vizTogl{
+		border:0 none;
+		background:#eee;
+		position:fixed;
+		top:0;
+		right:0;
+		width:30px;
+		height:30px;
+	}
+</style>
+</head>
+
+<body>
+	<button id="vizTogl"></button>
+<main style="display:none;">
+	<!-- <h1>Web Design and Development</h1> -->
+	<ul>
+		<li>1. <a href="#q1">HTML5 document template</a></li>
+		<li>2. <a href="#q2">HTML Table for Student Marks</a></li>
+		<li>3. <a href="#q3">Semantic Web Page Layout</a></li>
+		<li>4. <a href="#q4">Student Registration Form</a></li>
+		<li>5. <a href="#q5">Contact Us Form</a></li>
+		<li>6. <a href="#q6">Simple Login Form</a></li>
+		<li>7. <a href="#q7">Navigation Bar</a></li>
+		<li>8. <a href="#q8">CSS Button Styling with hover effect</a></li>
+		<li>9. <a href="#q9">Responsive Layout with Flexbox</a></li>
+		<li>10. <a href="#q10">Image Gallery Layout</a></li>
+		<li>11. <a href="#q11">Responsive Design with Media Queries</a></li>
+	</ul>
+	<section>
+		<h2 id="q1">HTML5 document template</h2>
+		<p><b>Aim:</b> Create the basic HTML5 document template which is also responsive. Also mention the charset.</p>
+		<div>
+			<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+	&lt;meta charset="UTF-8"&gt;
+	&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+	&lt;title&gt;Document Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+Page content goes here
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+			<!-- <div class="outputC"></div> -->
+		</div>
+	</section>
+	<!--  -->
+	<section>
+		<h2 id="q2">HTML Table for Student Marks</h2>
+		<p><b>Aim:</b> Create an HTML table to display student marks in three subjects.</p>
+		<div>
+			<pre class="pageBreak"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;Student Marks&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;table border="1" width="100%"&gt;
+		&lt;thead&gt;
+			&lt;tr&gt;
+				&lt;th&gt;Name&lt;/th&gt;
+				&lt;th&gt;Math&lt;/th&gt;
+				&lt;th&gt;Science&lt;/th&gt;
+				&lt;th&gt;English&lt;/th&gt;
+			&lt;/tr&gt;
+		&lt;/thead&gt;
+		&lt;tbody&gt;
+			&lt;tr&gt;
+				&lt;td&gt;Alice&lt;/td&gt;
+				&lt;td&gt;85&lt;/td&gt;
+				&lt;td&gt;90&lt;/td&gt;
+				&lt;td&gt;88&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;Bob&lt;/td&gt;
+				&lt;td&gt;78&lt;/td&gt;
+				&lt;td&gt;82&lt;/td&gt;
+				&lt;td&gt;80&lt;/td&gt;
+			&lt;/tr&gt;
+		&lt;/tbody&gt;
+	&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+			<!-- <div class="outputC"></div> -->
+		</div>
+	</section>
+	<!--  -->
+	<section>
+		<h2 id="q3">Semantic Web Page Layout</h2>
+		<p><b>Aim:</b> Create a basic blog-style web page using semantic HTML5 tags such as &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;section&gt;, &lt;article&gt;, &lt;aside&gt;, and &lt;footer&gt;. Include a navigation menu, two blog articles, and a sidebar.</p>
+		<div class="pageBreak">
+			<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;Semantic Web Page Layout&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;header&gt;
+		&lt;h1&gt;My Tech Blog&lt;/h1&gt;
+		&lt;p&gt;Insights on Web Development&lt;/p&gt;
+	&lt;/header&gt;
+
+	&lt;nav&gt;
+		&lt;ul&gt;
+			&lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="#"&gt;Articles&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/nav&gt;
+
+	&lt;main&gt;
+		&lt;section&gt;
+			&lt;article&gt;
+				&lt;h2&gt;Understanding HTML Semantics&lt;/h2&gt;
+				&lt;p&gt;Semantic tags help structure content meaningfully for both developers and browsers.&lt;/p&gt;
+			&lt;/article&gt;
+
+			&lt;article&gt;
+				&lt;h2&gt;CSS Tips for Beginners&lt;/h2&gt;
+				&lt;p&gt;Start with mastering selectors, box model, and layout techniques like Flexbox and Grid.&lt;/p&gt;
+			&lt;/article&gt;
+		&lt;/section&gt;
+
+		&lt;aside&gt;
+			&lt;h3&gt;Recent Posts&lt;/h3&gt;
+			&lt;ul&gt;
+				&lt;li&gt;&lt;a href="#"&gt;Intro to JavaScript&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="#"&gt;Responsive Design Basics&lt;/a&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/aside&gt;
+	&lt;/main&gt;
+
+	&lt;footer&gt;
+		&lt;p&gt;&copy; 2025 My Tech Blog. All rights reserved.&lt;/p&gt;
+	&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+			<!-- <div class="outputC"></div> -->
+		</div>
+	</section>
+	<!--  -->
+	<section>
+		<h2 id="q4">Student Registration Form</h2>
+		<p><b>Aim:</b> Create an HTML form to register a new student with fields for name, email, gender, and course selection.</p>
+		<div class="pageBreak">
+			<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;Student Registration&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;form&gt;
+		&lt;label&gt;Full Name:&lt;/label&gt;
+		&lt;input type="text" name="name" required&gt;&lt;br&gt;&lt;br&gt;
+
+		&lt;label&gt;Email:&lt;/label&gt;
+		&lt;input type="email" name="email" required&gt;&lt;br&gt;&lt;br&gt;
+
+		&lt;label&gt;Gender:&lt;/label&gt;
+		&lt;input type="radio" name="gender" value="Male"&gt; Male
+		&lt;input type="radio" name="gender" value="Female"&gt; Female&lt;br&gt;&lt;br&gt;
+
+		&lt;label&gt;Course:&lt;/label&gt;
+		&lt;select name="course"&gt;
+			&lt;option value="cs"&gt;Computer Science&lt;/option&gt;
+			&lt;option value="it"&gt;Information Technology&lt;/option&gt;
+			&lt;option value="ece"&gt;Electronics&lt;/option&gt;
+		&lt;/select&gt;&lt;br&gt;&lt;br&gt;
+
+		&lt;input type="submit" value="Register"&gt;
+	&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+			<!-- <div class="outputC"></div> -->
+		</div>
+	</section>
+	<!--  -->
+	<section>
+		<h2 id="q5">Contact Us Form</h2>
+		<p><b>Aim:</b> Create a contact form with fields for name, email, subject, and message.</p>
+		<div class="pageBreak">
+			<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;Contact Us&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;form&gt;
+		&lt;label&gt;Name:&lt;/label&gt;
+		&lt;input type="text" name="name"&gt;&lt;br&gt;&lt;br&gt;
+
+		&lt;label&gt;Email:&lt;/label&gt;
+		&lt;input type="email" name="email"&gt;&lt;br&gt;&lt;br&gt;
+
+		&lt;label&gt;Subject:&lt;/label&gt;
+		&lt;input type="text" name="subject"&gt;&lt;br&gt;&lt;br&gt;
+
+		&lt;label&gt;Message:&lt;/label&gt;&lt;br&gt;
+		&lt;textarea name="message" rows="5" cols="30"&gt;&lt;/textarea&gt;&lt;br&gt;&lt;br&gt;
+
+		&lt;input type="submit" value="Send"&gt;
+	&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+			<!-- <div class="outputC"></div> -->
+		</div>
+	</section>
+	<!--  -->
+	<section>
+		<h2 id="q6">Simple Login Form</h2>
+		<p><b>Aim:</b> Create a login form with username and password fields.</p>
+		<div class="pageBreak">
+			<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;Sign In&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;form&gt;
+		&lt;label&gt;Username:&lt;/label&gt;
+		&lt;input type="text" name="username"&gt;&lt;br&gt;&lt;br&gt;
+		&lt;label&gt;Password:&lt;/label&gt;
+		&lt;input type="password" name="password"&gt;&lt;br&gt;&lt;br&gt;
+		&lt;input type="submit" value="Login"&gt;
+	&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+			<!-- <div class="outputC"></div> -->
+		</div>
+	</section>
+	<!--  -->
+	<section>
+		<h2 id="q7">Navigation Bar</h2>
+		<p><b>Aim:</b> Create a horizontal navigation bar with links to Home, About, Services, and Contact.</p>
+		<div>
+			<pre class="pageBreak"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;Navigation Bar&lt;/title&gt;
+	&lt;style&gt;
+		ul {
+			list-style-type: none;
+			background-color: #333;
+		}
+		li {
+			float: left;
+		}
+		li a {
+			display: block;
+			color: blue;
+			padding: 14px 16px;
+			text-decoration: none;
+		}
+		li a:hover {
+			background-color: #999;
+		}
+	&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;nav&gt;
+		&lt;ul&gt;
+			&lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="#"&gt;Services&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/nav&gt;
+&lt;/body&gt;
+&lt;/html&gt</code></pre>
+			<!-- <div class="outputC"></div> -->
+		</div>
+	</section>
+	<!--  -->
+	<section>
+		<h2 id="q8">CSS Button Styling with hover effect</h2>
+		<p><b>Aim:</b> Create a button with hover effect using CSS.</p>
+		<div class="pageBreak">
+			<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;Styled Button Demo&lt;/title&gt;
+	&lt;style&gt;
+		.btn {
+			background-color: #4CAF50;
+			color: white;
+			padding: 12px 24px;
+			border: none;
+			cursor: pointer;
+			font-size: 16px;
+		}
+		.btn:hover {
+			background-color: #45a049;
+		}
+	&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;button class="btn"&gt;Click Me&lt;/button&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+			<!-- <div class="outputC"></div> -->
+		</div>
+	</section>
+	<!--  -->
+	<section>
+		<h2 id="q9">Responsive Layout with Flexbox</h2>
+		<p><b>Aim:</b> Create a responsive layout with two columns using Flexbox.</p>
+		<div class="pageBreak">
+			<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;Flexbox Demo&lt;/title&gt;
+	&lt;style&gt;
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.box {
+			flex: 1;
+			padding: 20px;
+			background-color: lightblue;
+			margin: 10px;
+		}
+	&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;div class="container"&gt;
+		&lt;div class="box"&gt;Column 1&lt;/div&gt;
+		&lt;div class="box"&gt;Column 2&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+			<!-- <div class="outputC"></div> -->
+		</div>
+	</section>
+	<!--  -->
+	<section>
+		<h2 id="q10">Image Gallery Layout</h2>
+		<p><b>Aim:</b> Create a 3-column image gallery using HTML and CSS.</p>
+		<div class="pageBreak">
+			<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;Image Gallery&lt;/title&gt;
+	&lt;style&gt;
+		.gallery {
+			display: flex;
+			gap: 10px;
+		}
+		.gallery img {
+			width: 100%;
+			max-width: 30%;
+			border: 2px solid #ccc;
+		}
+	&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;div class="gallery"&gt;
+		&lt;img src="image1.jpg" alt="Image 1"&gt;
+		&lt;img src="image2.jpg" alt="Image 2"&gt;
+		&lt;img src="image3.jpg" alt="Image 3"&gt;
+	&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+			<!-- <div class="outputC"></div> -->
+		</div>
+	</section>
+	<!--  -->
+	<section>
+		<h2 id="q11">Responsive Design with Media Queries</h2>
+		<p><b>Aim:</b> Create a webpage that changes background color based on screen orientation and displays a message only when the screen width is less than 600px.</p>
+		<div class="pageBreak">
+			<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+	&lt;title&gt;Responsive Media Query&lt;/title&gt;
+	&lt;style&gt;
+		body {
+			font-family: Arial, sans-serif;
+			padding: 20px;
+			text-align: center;
+		}
+
+		/* Portrait orientation */
+		@media (orientation: portrait) {
+			body {
+				background-color: lightblue;
+			}
+		}
+
+		/* Landscape orientation */
+		@media (orientation: landscape) {
+			body {
+				background-color: lightgreen;
+			}
+		}
+
+		/* Width less than 600px */
+		@media (max-width: 600px) {
+			.mobile-message {
+				display: block;
+				color: red;
+				font-weight: bold;
+			}
+		}
+
+		/* Hide message by default */
+		.mobile-message {
+			display: none;
+		}
+	&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;h1&gt;Welcome to Responsive Design&lt;/h1&gt;
+	&lt;p class="mobile-message"&gt;You are viewing this on a small screen!&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+			<!-- <div class="outputC"></div> -->
+		</div>
+	</section>
+</main>
+<script>
+	(function(d){
+		const b = d.getElementById('vizTogl'),
+			mn = d.getElementsByTagName('main')[0];
+		b.onclick=function(){
+			mn.style.display = mn.style.display === 'none' ? 'unset' : 'none';
+		};
+	})(document)
+</script>
+</body>
+</html>
